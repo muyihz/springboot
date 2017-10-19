@@ -3,10 +3,10 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/ma
   	<modelVersion>4.0.0</modelVersion>
   	<groupId>com.muou</groupId>
   	<artifactId>common</artifactId>
-  	<packaging>war</packaging>
+  <!-- 	<packaging>war</packaging>
   	<version>0.0.1-SNAPSHOT</version>
   	<name>common Maven Webapp</name>
-  	<url>http://maven.apache.org</url>
+  	<url>http://maven.apache.org</url> -->
   	
 	<parent>
 	  <groupId>org.springframework.boot</groupId>
@@ -32,11 +32,11 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/ma
 		    <artifactId>spring-boot-starter-jdbc</artifactId>
 		    <version>1.5.7.RELEASE</version>
 		</dependency>
-		<dependency>
+		<!-- <dependency>
 		    <groupId>org.springframework.boot</groupId>
 		    <artifactId>spring-boot-starter-log4j2</artifactId>
 		    <version>1.5.7.RELEASE</version> 
-		</dependency>
+		</dependency> -->
 		<dependency>
 		    <groupId>org.mybatis.spring.boot</groupId>
 		    <artifactId>mybatis-spring-boot-starter</artifactId>
@@ -65,5 +65,12 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/ma
 	</dependencies>
 	<build>
 	  <finalName>common</finalName>
+	  <plugins>
+          <plugin>
+              <groupId>org.springframework.boot</groupId>
+              <artifactId>spring-boot-maven-plugin</artifactId>
+          </plugin>
+      </plugins>
+      
 	</build>
 </project>
