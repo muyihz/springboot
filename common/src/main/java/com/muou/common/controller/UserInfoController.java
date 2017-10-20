@@ -37,8 +37,6 @@ public class UserInfoController {
 	@RequestMapping(value="/userinfo")
 	@ResponseBody
 	public String userInfo() throws Exception{
-		logger.info("睡眠20s");
-		Thread.sleep(20000);
 		logger.info(JsonUtil.obj2Json(userInfoDao.getUserInfo(1L)).toJSONString());
 		return "1111111111111111";
 	}

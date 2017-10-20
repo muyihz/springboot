@@ -32,7 +32,7 @@ public class SessionInterceptor implements HandlerInterceptor{
 		
 	}
 	public boolean preHandle(HttpServletRequest req, HttpServletResponse resp, Object obj) throws Exception {
-		String testKey = req.getParameter("testKey");
+		/*String testKey = req.getParameter("testKey");
 		logger.info("session 拦截器,检查session有效性===="+testKey);
 		String sessionId = RequestUtil.getCookieByKey(req,CommonParamConfig.COMMMON_SESSION_ID);
 		ValueOperations<String, String> valueOperations = stringRedisTemplate.opsForValue();
@@ -43,7 +43,7 @@ public class SessionInterceptor implements HandlerInterceptor{
 			return false;
 		}
 		JSONObject userJson =JSONObject.parseObject(userJsonStr);
-		req.setAttribute("_userJson", userJson);
+		req.setAttribute("_userJson", userJson);*/
 		return true;
 	}
 
