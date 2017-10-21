@@ -50,4 +50,9 @@ public class UserInfoController {
 		return testRedis;
 	}
 	
+/*	@RequestMapping(value="/index")
+	public String index(){
+		return "index";
+	}*/
+	
 }

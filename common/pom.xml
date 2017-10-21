@@ -32,11 +32,6 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/ma
 		    <artifactId>spring-boot-starter-jdbc</artifactId>
 		    <version>1.5.7.RELEASE</version>
 		</dependency>
-		<!-- <dependency>
-		    <groupId>org.springframework.boot</groupId>
-		    <artifactId>spring-boot-starter-log4j2</artifactId>
-		    <version>1.5.7.RELEASE</version> 
-		</dependency> -->
 		<dependency>
 		    <groupId>org.mybatis.spring.boot</groupId>
 		    <artifactId>mybatis-spring-boot-starter</artifactId>
@@ -61,6 +56,25 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/ma
 		    <groupId>com.alibaba</groupId>
 		    <artifactId>fastjson</artifactId>
 		    <version>1.2.39</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.tomcat.embed</groupId>
+			<artifactId>tomcat-embed-jasper</artifactId>
+			<scope>provided</scope>
 		</dependency>
 	</dependencies>
 	<build>
