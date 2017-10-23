@@ -1,4 +1,4 @@
-package com.muou.common.interceptor;
+package com.muou.common.support;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;

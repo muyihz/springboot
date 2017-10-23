@@ -1,4 +1,4 @@
-package com.muou.common.interceptor;
+package com.muou.common.support;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
