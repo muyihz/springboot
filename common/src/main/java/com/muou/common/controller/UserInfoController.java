@@ -7,8 +7,12 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+
 import com.muou.common.dao.UserInfoDao;
+import com.muou.common.entity.UserInfo;
+import com.muou.common.support.CommonParamConfig;
 import com.muou.common.util.JsonUtil;
 
 @Controller
@@ -24,17 +28,15 @@ public class UserInfoController {
 	@ResponseBody
 	public String test(){
 		logger.info("=======================");
-		testss();
 		return "1111111111111111";
-	}
-	public void testss(){
-		logger.info("========wwweeweq===========");
 	}
 	@RequestMapping(value="/userinfo")
 	@ResponseBody
 	public String userInfo() throws Exception{
+		UserInfo userInfo = userInfoDao.getUserInfo(1L);
+		String jsonStr = JsonUtil.obj2Json(userInfo).toJSONString();
 		logger.info(JsonUtil.obj2Json(userInfoDao.getUserInfo(1L)).toJSONString());
-		return "1111111111111111";
+		return jsonStr;
 	}
 	
 	@RequestMapping(value="/redis")
@@ -46,9 +48,12 @@ public class UserInfoController {
 		return testRedis;
 	}
 	
-/*	@RequestMapping(value="/index")
-	public String index(){
-		return "index";
-	}*/
+	@RequestMapping(value="/publish")
+	@ResponseBody
+	public String publish(@RequestParam(value = "message", required = true) String message){
+		logger.info("发布信息 ====== " + message);
+		stringRedisTemplate.convertAndSend(CommonParamConfig.COMMMON_TEST_CHANNEL, message);
+		return message;
+	}
 	
 }

@@ -6,16 +6,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-
-import com.muou.common.support.ThreadPool;
-
 @Component
 public class MessageReceiver {
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
 	@Autowired
 	private ExecutorService executorService ;
 	public void receiveMessage(final String message){
-		
 		logger.info("接收消息  ===== " + message);
 		executorService.execute(new Runnable() {
 			@Override
