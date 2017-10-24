@@ -13,7 +13,6 @@ import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.alibaba.fastjson.JSONObject;
-import com.muou.common.util.CommonParamConfig;
 import com.muou.common.util.RequestUtil;
 @Component
 public class SessionInterceptor implements HandlerInterceptor{

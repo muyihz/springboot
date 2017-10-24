@@ -1,4 +1,4 @@
-package com.muou.common.util;
+package com.muou.common.support;
 
 public class CommonParamConfig {
 	public static final String COMMMON_SESSION_ID = "COMMON-SESSION-ID";
