@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.muou.common.dao.UserInfoDao;
 import com.muou.common.entity.UserInfo;
 import com.muou.common.support.CommonParamConfig;
+import com.muou.common.support.RequsetRuleCheck;
 import com.muou.common.util.JsonUtil;
 
 @Controller
@@ -27,7 +28,7 @@ public class UserInfoController {
 	@RequestMapping(value="/test")
 	@ResponseBody
 	public String test(){
-		logger.info("=======================");
+		logger.info("======================= ============= " );
 		return "1111111111111111";
 	}
 	@RequestMapping(value="/userinfo")

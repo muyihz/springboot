@@ -9,6 +9,6 @@ import java.lang.annotation.Target;
 @Target(value=ElementType.PARAMETER)
 @Documented
 @Retention(RetentionPolicy.RUNTIME)
-public @interface Attribution {
-	String paramName();
+public @interface RequsetRuleCheck {
+	int ruleMask() default -1;
 }

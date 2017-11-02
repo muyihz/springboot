@@ -1,5 +1,6 @@
 package com.muou.common.support;
 
+
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
@@ -16,12 +17,11 @@ public class AopInterceptor {
 	@Pointcut("execution(* com.muou.common.controller.*.*(..))")
 	public void classPointCut(){};
 	
-	//@Pointcut("excution (*com.muou.common.comntroller.*.*(..)) and @annotation(org.springframework.web.bind.annotation.RequestMapping)")
-	//public void classMethodPointCut(){};
+	@Pointcut("@annotation(org.springframework.web.bind.annotation.RequestMapping)")
+	public void annotationPointCut(){};
 	
-	@Around("classPointCut()")
+	@Around("annotationPointCut()")
 	public Object interceptor(ProceedingJoinPoint pjp) throws Throwable{
-		//String testkey = request.getParameter("testkey");
 		logger.info("瞎搞 aop配置====");
 		Object obj = pjp.proceed();
 		return obj;
