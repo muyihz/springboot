@@ -10,8 +10,8 @@ public class CommonWebAppConfigurer extends WebMvcConfigurerAdapter{
 	SessionInterceptor interceptor;
 	@Override
 	public void addInterceptors(InterceptorRegistry registry) {
-		registry.addInterceptor(interceptor).addPathPatterns("/**").excludePathPatterns("/redis");
-		super.addInterceptors(registry);
+		//registry.addInterceptor(interceptor).addPathPatterns("/**").excludePathPatterns("/redis");
+		//super.addInterceptors(registry);
 	}
 	
 	

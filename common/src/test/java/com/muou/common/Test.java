@@ -1,6 +1,7 @@
 package com.muou.common;
 
 import java.lang.reflect.Field;
+import java.net.InetAddress;
 import java.util.Iterator;
 
 public class Test {
@@ -28,7 +29,10 @@ public class Test {
 		
 	}
 	public static void main(String[] args) throws Exception {
-		testField();
+		//testField();
+		
+		String bb =InetAddress.getLocalHost().getHostAddress();
+		System.out.println(new String(bb));
 	}
 	
 }

@@ -15,7 +15,7 @@ public class CommonListener implements ServletContextListener{
 	@Autowired
 	private RedisTemplate redisTemplate;
 	public void contextInitialized(ServletContextEvent sce) {
-		final ListOperations listOperations = redisTemplate.opsForList();
+		/*final ListOperations listOperations = redisTemplate.opsForList();
 		
 		new Thread(new Runnable() {
 			@Override
@@ -35,7 +35,7 @@ public class CommonListener implements ServletContextListener{
 					}
 				}
 			}
-		}).start();
+		}).start();*/
 		
 	}
 	

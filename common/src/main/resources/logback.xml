@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration scan="true" scanPeriod="60 seconds" debug="false">
-	<property name="log.dir" value="d:/common"/>
+	<property name="log.dir" value="./common"/>
 	<timestamp key="byMS" datePattern="yyyyMMddHHmmssSSS"/>
 	<property name="logFormat" value="[%thread-${byMS}] %-5level %C%M:%L %msg %n"/>
 	<!-- 控制台打印日志 -->

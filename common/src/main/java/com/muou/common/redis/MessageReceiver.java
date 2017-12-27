@@ -7,7 +7,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 @Component
-public class MessageReceiver {
+public class MessageReceiver {/*
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
 	@Autowired
 	private ExecutorService executorService ;
@@ -28,4 +28,4 @@ public class MessageReceiver {
 		});
 		
 	}
-}
+*/}

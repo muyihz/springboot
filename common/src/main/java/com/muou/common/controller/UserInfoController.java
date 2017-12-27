@@ -1,5 +1,12 @@
 package com.muou.common.controller;
 
+import java.io.IOException;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +21,7 @@ import com.muou.common.dao.UserInfoDao;
 import com.muou.common.entity.UserInfo;
 import com.muou.common.support.CommonParamConfig;
 import com.muou.common.util.JsonUtil;
+import com.muou.common.util.RequestUtil;
 
 @Controller
 @EnableAutoConfiguration
@@ -26,10 +34,29 @@ public class UserInfoController {
 	
 	@RequestMapping(value="/test")
 	@ResponseBody
-	public String test(){
+	public String test() throws Exception{
 		logger.info("======================= ============= " );
 		return "1111111111111111";
 	}
+	
+	@RequestMapping(value="/checkToken")
+	@ResponseBody
+	public String cheakToken(HttpServletRequest request, HttpServletResponse resp) throws Exception{
+		
+		//signature
+		String signature = request.getParameter("signature");
+        //时间戳
+        String timestamp = request.getParameter("timestamp");
+        //随机数
+        String nonce = request.getParameter("nonce");
+        //随机字符串
+        String echostr = request.getParameter("echostr");
+        
+        logger.info(signature + "==" +  timestamp + "==" + nonce + "==" + echostr);
+		return echostr;
+	}
+	
+	
 	@RequestMapping(value="/userinfo")
 	@ResponseBody
 	public String userInfo() throws Exception{

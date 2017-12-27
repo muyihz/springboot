@@ -13,7 +13,7 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
 import com.muou.common.support.CommonParamConfig;
 
 @Configuration
-public class RedisConfig {
+public class RedisConfig {/*
 	@Autowired
 	private RedisTemplate redisTemplate;
 	
@@ -35,4 +35,4 @@ public class RedisConfig {
 		redisTemplate.setValueSerializer(new StringRedisSerializer());
 		return redisTemplate;
 	}
-}
+*/}
